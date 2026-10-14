@@ -107,7 +107,7 @@ const STEPS = [
     "goal": "Every lead, reply, and customer tracked in one place — software does the busywork, and a human approves anything that leaves the building.",
     "why": "Leads die in inboxes. A CRM remembers what you won't, and automation handles the filing, summarizing, and reminding. The rule that keeps it safe: AI can draft; a human approves every outward send.",
     "tools": "Zoho CRM (a free tier exists); n8n for workflow automation (self-hosted); your existing email account.",
-    "cost": "$0 on the free CRM tier. Honesty note: PowerTies pays about $13.49/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.",
+    "cost": "$0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.",
     "time": "A weekend to wire the basics; an hour here and there to improve it.",
     "checklist": [
       "Set up Zoho CRM (free tier) with Leads and Contacts",
@@ -116,7 +116,7 @@ const STEPS = [
       "Add a daily lead summary so a new lead never sits unseen",
       "Write down your one inviolable rule: no automated outward sends without human approval"
     ],
-    "powerties": "n8n runs our email triage (AI-drafted replies that a human approves before sending), CRM lead creation, a morning lead digest, and Square payment handling. It all runs on that one $13.49/mo VPS — everything else in the stack is free.",
+    "powerties": "n8n runs our email triage (AI-drafted replies that a human approves before sending), CRM lead creation, a morning lead digest, and Square payment handling. It all runs on that one ≈$15/mo VPS — everything else in the stack is free.",
     "n": 7
   },
   {
