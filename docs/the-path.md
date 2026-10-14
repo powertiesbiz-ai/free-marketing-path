@@ -158,7 +158,7 @@ You can also staff the ring leader for $0 with an open-source agent framework �
 
 **Tools:** Zoho CRM (a free tier exists); n8n for workflow automation (self-hosted); your existing email account.
 
-**Estimated cost:** $0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.
+**Estimated cost:** $0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock. You can run n8n on your own computer for $0. (The VPS is one line in PowerTies' ≈$56/mo all-in spend — ring-leader platform and research tools included; the full ledger is in the proof log.)
 
 **Estimated time:** A weekend to wire the basics; an hour here and there to improve it.
 
@@ -252,7 +252,7 @@ You can also staff the ring leader for $0 with an open-source agent framework �
 
 **Tools — the actual PowerTies setup:** Claude (paid plan) is the lead-research leg: it finds company names, their location/context, and why each company fits. Apollo.io's free tier is an optional lead-data accelerator — PowerTies' Apollo leg is currently paused until its October 24, 2026 credit refresh. Tank coordinates this pooled model, verifies every address, and sends. Zoho CRM holds the records, and a spreadsheet or grading-sheet template is enough for the weekly grade. The generic route still works: do the research yourself with search, directories, and community listening from Step 9 — and never send to an address you have not verified.
 
-**Estimated cost:** $0 to near-$0 for the generic route. PowerTies chooses Claude at ≈$21/mo for research speed; Apollo is optional on its free tier. Verifiers have free tiers; the discipline is free.
+**Estimated cost:** $0 to near-$0 for the generic route. PowerTies chooses Claude at ≈$21/mo for research speed (optional, and under review in October 2026 — the ring leader can absorb the research leg); Apollo is optional on its free tier. Verifiers have free tiers; the discipline is free.
 
 **Estimated time:** About 30 minutes a day for sends; an hour a week to grade.
 
