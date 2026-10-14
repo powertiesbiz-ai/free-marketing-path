@@ -77,6 +77,10 @@ The **[free marketing teardown program](docs/teardowns.md)** walks a consenting 
 
 We're building a community around this — owners comparing what actually works, in the open. The launch plan, our rules of engagement, and our first posts live in **[docs/community-plan.md](docs/community-plan.md)**. Find us as **powertiesbiz** on Reddit and Discord.
 
+## Implementation log
+
+What actually got built, tool by tool, as it happened — the Tally lead-form pipeline, the Kit email setup (and its open questions), the community accounts — lives in **[docs/implementation-log.md](docs/implementation-log.md)**.
+
 ## Contributing
 
 Walked the path and found a better free tool? A step that's out of date? A tactic that brought you a real customer? Open an issue or a pull request — or come tell us in the community. Corrections and field reports from real owners are the most valuable contributions this repo can get.
