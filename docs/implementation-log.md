@@ -31,6 +31,27 @@ this file is the build diary behind them.
 - The four sequence emails are drafted and waiting on owner approval.
   Nothing sends before that.
 
+## Oct 14, 2026 — Kit sequences: the verdict, Plan B1 chosen
+
+- The owner checked in-account: the free plan does NOT run email
+  sequences. Sequences work only during a Creator / Creator Pro trial;
+  when a trial ends without a paid plan, sequences stop running — but
+  anything built stays saved on the account and becomes available again
+  if the account upgrades.
+- Decision: Plan B1. Kit holds the subscriber list and the tags
+  (`quiz-mlot`, `quiz-ai-readiness`, `booked-99`) through the API; our
+  n8n workflow sends the four follow-up emails on Days 1/3/7/12 through
+  the existing Gmail path, checking Kit for the `booked-99` tag before
+  each send so anyone who has booked stops getting nudged.
+- The four follow-up emails are approved by the owner (signed "Best,
+  Keith, PowerTies Consulting Group").
+- Wiring status: being built and tested on a copy of the Quiz Lead
+  Capture workflow; the live swap follows successful tests. Not live
+  yet.
+- The Oct 22, 2026 recheck still stands — it now confirms the parts B1
+  depends on (the API and the tags) still answer on the genuine free
+  plan after any trial has fully lapsed.
+
 ## Oct 13–14, 2026 — Community infrastructure stood up
 
 - Reddit: u/PowerTiesBiz (six years old, starting from 1 karma) joined
