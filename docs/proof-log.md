@@ -121,3 +121,11 @@ You can also staff the ring leader for $0 with an open-source agent framework �
 ### How to read this table
 
 Do not copy the spending before you copy the system. Start with the $0 version. Add a paid tool only when it removes a bottleneck you have actually hit, and write down what it bought you. That is the difference between a stack and a pile of subscriptions.
+
+### Time — the other ledger
+
+Cash is only half the ledger. Keith's time on this project runs ≈2 hours a day, spread across the day, and nearly all of it is **discovery** — testing what works, deciding, approving. The execution is forwarded to the ring leader (Tank), so the owner's hours buy judgment, not labor.
+
+So the founding case's honest answer to research question Q3 is: the cash is ≈$56/mo, and the owner's time is ≈2 hours a day of discovery and judgment — not execution.
+
+That discovery time is effectively donated: the published results are how other owners benefit from it.
