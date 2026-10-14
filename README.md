@@ -6,6 +6,8 @@ A step-by-step guided path that walks a small-business owner through marketing t
 
 No hype, no $2,000 course, no "growth hacks." Just the real stack, the real tools, and the real numbers.
 
+Built and run by a business owner who doesn't code — directed in plain language, executed and verified by an AI ring leader; Tank is part of Keith's existing Muse access, so the role costs him nothing extra beyond that access. If you can describe what you want, you can run this system.
+
 ## Who it's for
 
 Solo owners and small teams who do good work and are invisible online — and who would rather spend a weekend building a system than spend money they don't have on ads that stop the day the budget does.
