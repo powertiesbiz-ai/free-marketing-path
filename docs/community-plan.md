@@ -184,6 +184,7 @@ The verified forums research (above) makes the shape obvious:
 - **No links.** Not in the question, not slipped into a comment. If someone asks for the resource directly, that's a different moment with its own rules.
 - **Stay in the comments and ask follow-ups** — the follow-up is where the real methods surface ("what did that cost you in time?" beats any top-level answer).
 - **Log the answers** into the pains/methods log weekly. A thread that isn't logged is research thrown away.
+- **When an answer is worth keeping, invite the owner to file a [field report](../templates/field-report.md)** — with their consent choice on how it's published (named, anonymized, or research-only). An answer is a comment; a field report is data.
 
 ### Draft questions
 
