@@ -21,6 +21,7 @@ Copy everything below for a new monthly entry.
 | Sent |  |
 | Delivered |  |
 | Replied |  |
+| Real conversations (ICP-fit, two-way) |  |
 | Paid |  |
 | Revenue | $ |
 
@@ -66,6 +67,8 @@ This is the starting line, recorded on October 13, 2026. The outreach system had
 | Genuine replies | 0 |
 | Paid sessions | 0 |
 | Revenue | $0 |
+
+Against the owner's success bar (1–2 real ICP conversations/week): currently 0 — the gap the Oct 31 checkpoint will judge.
 
 ### The honest problem
 
