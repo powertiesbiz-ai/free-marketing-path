@@ -35,7 +35,7 @@ These are the five things we genuinely don't know and are asking the field — o
 
 1. **Which no-cost/low-cost tactics actually produce customers** — observed results, by trade and context, not opinions or best practices?
 2. **Where does the path break for other non-technical owners** — which step stalls them, and why?
-3. **What is the true time cost?** The path claims $0 cash. Hours — the owner's, and whoever approves and helps — are the unmeasured currency, here and everywhere else in this space.
+3. **What is the true time cost?** The path claims $0 cash. Hours — the owner's, and whoever approves and helps — are the unmeasured currency, here and everywhere else in this space. For the founding case we now have a baseline figure: the owner spends ≈2 hours a day on discovery and approvals, with execution delegated to the ring leader (see [the proof log's "Time — the other ledger"](proof-log.md#time--the-other-ledger)).
 4. **Does the ring-leader model transfer?** Can other non-coders direct an AI agent — a paid one, or a free open-source setup like OpenClaw — to run this system? Or is our setup a special case?
 5. **Which barter and partnership arrangements actually hold up over time** — and what terms (scope, value parity, timeline, in writing) make them last?
 
