@@ -135,10 +135,12 @@ Verified as listed and public on DISBOARD, October 2026. Join route for all: DIS
 
 | Server | Approx. size | Focus | Verdict |
 |---|---|---|---|
-| COESO | ~2.5K members (~139 online at check; bumped within hours — actively maintained) | Entrepreneurs across ecom, SaaS, marketing, sales, content; role-based vertical channels, mock calls, wins/resources | **Join at launch** — right size to be known in; active, not a ghost town |
-| RoundTable | Listed on DISBOARD (member count not displayed at check) | Entrepreneurs, founders, freelancers; business/startup discussion, marketing/sales/AI channels, accountability; explicitly "no spam, no fake gurus" | **Join at launch** — culture matches our rules of engagement |
-| Mind Miners | Small / pre-launch beta (count not displayed) | Professionals and side-hustlers; failure-sharing, brainstorming, weekly founder-led calls; no upsells/spam | **Join at launch** — early-member advantage; small rooms are where real conversations happen |
+| COESO — listed as "Coeso": https://disboard.org/server/1487140206590034143 | ~2.5K members (~139 online at check; bumped within hours — actively maintained) | Entrepreneurs across ecom, SaaS, marketing, sales, content; role-based vertical channels, mock calls, wins/resources | **Join at launch** — right size to be known in; active, not a ghost town |
+| RoundTable: https://disboard.org/server/1524844805329387720 | Listed on DISBOARD (member count not displayed at check) | Entrepreneurs, founders, freelancers; business/startup discussion, marketing/sales/AI channels, accountability; explicitly "no spam, no fake gurus" | **Join at launch** — culture matches our rules of engagement |
+| Mind Miners — no direct page link; listed on the DISBOARD entrepreneurship tag page: https://disboard.org/servers/tag/entrepreneurship (find the Mind Miners entry, ⛏️, and join from there) | Small / pre-launch beta (count not displayed) | Professionals and side-hustlers; failure-sharing, brainstorming, weekly founder-led calls; no upsells/spam | **Join at launch** — early-member advantage; small rooms are where real conversations happen |
 | GrowthGrid | Listed on DISBOARD (count not displayed) | Entrepreneurs, creators, freelancers; no-spam positioning | **Optional 4th** — join if bandwidth allows after the first three |
+
+Note (Oct 13, 2026): DISBOARD's name search did not surface these servers by name — use the direct links above; the listings are live (Coeso bumped within hours of this check).
 
 ### Launch sequence — the first rooms
 
