@@ -1,0 +1,370 @@
+{
+  "name": "Email Draft Assistant",
+  "nodes": [
+    {
+      "id": "4b45f13f-58c9-415e-9fd9-fd486efc2387",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -816,
+        -448
+      ],
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "aa0b7e57-2af6-4ea6-96c9-9420a5cc986e",
+      "name": "Get a file",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        -672,
+        -448
+      ],
+      "parameters": {
+        "resource": "file",
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "value": "your-github-account",
+          "mode": "list",
+          "cachedResultName": "your-github-account",
+          "cachedResultUrl": "https://github.com/your-github-account"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "your-voice-profile-repo",
+          "mode": "list",
+          "cachedResultName": "your-voice-profile-repo",
+          "cachedResultUrl": "https://github.com/your-github-account/your-voice-profile-repo"
+        },
+        "filePath": "voice-profile.md",
+        "additionalParameters": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "6121634f-9ec4-49e4-8d69-08cb8831155d",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -528,
+        -448
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are Your Name's personal email assistant. Your job is to classify incoming emails and draft replies in the owner's voice when appropriate.\n\nHere is the owner's voice and communication profile:\n{{$('Get a file').item.json.content}}\n\nHere is the incoming email:\nFrom: {{$('Gmail Trigger').item.json.From}}\nSubject: {{$('Gmail Trigger').item.json.Subject}}\nContent: {{$('Gmail Trigger').item.json.snippet}}\nFull Body: {{$('Gmail Trigger').item.json.Text}}\n\nRespond in this exact format with no deviation and no extra commentary:\nDRAFTREPLY: [YES or NO - YES only if this is a real person deserving a personal reply, NO for newsletters, spam, automated, or no-reply emails]\nISLEAD: [YES or NO - YES if this person appears to be a potential client or referral]\nDRAFT:\n[Write the full email reply here in the owner's voice based on his profile above. If DRAFTREPLY is NO write the word NONE here]",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "080ff159-860b-4812-9756-ae79bb4cec0f",
+      "name": "Send a text message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -32,
+        -432
+      ],
+      "parameters": {
+        "chatId": "__replace__",
+        "text": "=📧 New Email Draft Ready for Approval!\n\nFrom: {{$('Gmail Trigger').item.json.From}}\nSubject: {{$('Gmail Trigger').item.json.Subject}}\n\n{{$json.output.split('DRAFT:\\n')[1].trim()}}\n\n---\nTo APPROVE and send reply type:\nAPPROVE {{$('Gmail Trigger').item.json.From.split('<')[1].replace('>', '')}}\n\nTo EDIT type:\nEDIT: [your changes] {{$('Gmail Trigger').item.json.From.split('<')[1].replace('>', '')}}",
+        "additionalFields": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "80104900-b153-405d-86f3-90527ba19904",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -256,
+        -336
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f08234a9-85b6-4d8d-a4f1-ce308a6f6d5a",
+              "leftValue": "={{$json.output.split('DRAFTREPLY: ')[1].split('\\n')[0].trim()}}",
+              "rightValue": "YES",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "0201cd8d-35b4-4f52-b55a-6878744d09cd",
+      "name": "Code in JavaScript",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        144,
+        -432
+      ],
+      "parameters": {
+        "jsCode": "const fromField = $('Gmail Trigger').item.json.From;\nconst toEmail = fromField.split('<')[1].replace('>', '').trim();\nconst subject = $('Gmail Trigger').item.json.Subject;\nconst draftOutput = $('AI Agent').item.json.output;\nconst body = draftOutput.split('DRAFT:\\n')[1]?.trim() || draftOutput.trim();\nconst timestamp = new Date().toISOString();\n\nreturn [{ json: {\n  mode: 'store',\n  to: toEmail,\n  subject: `Re: ${subject}`,\n  body: body,\n  timestamp: timestamp\n}}];"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "d87aa62d-684a-41ff-900d-3b83b0f7d055",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        352,
+        -432
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://your-n8n.example.com/webhook/approve-email",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "mode",
+              "value": "={{ $json.mode }}"
+            },
+            {
+              "name": "to",
+              "value": "={{ $json.to }}"
+            },
+            {
+              "name": "subject",
+              "value": "={{ $json.subject }}"
+            },
+            {
+              "name": "body",
+              "value": "={{ $json.body }}"
+            },
+            {
+              "name": "timestamp",
+              "value": "={{ $json.timestamp }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "a6c76294-31aa-452e-8b89-4e4af706d5c8",
+      "name": "Send a text message1",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        560,
+        -432
+      ],
+      "parameters": {
+        "chatId": "__replace__",
+        "text": "=📧 New Email Draft Ready\n\nTo: {{ $json.to }}\nSubject: {{ $json.subject }}\n\n{{ $json.body }}\n\n---\nTo approve, reply: APPROVE: {{ $json.to }}",
+        "additionalFields": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "b2edcb50-6be4-4916-918d-c8d57fecba75",
+      "name": "Groq Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -528,
+        -272
+      ],
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "a3f08fed-b6a4-41a1-8801-3826174f8774",
+      "name": "Skip self-sent emails",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -596,
+        -448
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "4336336f-92a2-4ffc-8948-489385fd5b54",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "you@example.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            },
+            {
+              "id": "335e76a5-9382-430f-94d0-ce360b5f56d0",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "you@example.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            },
+            {
+              "id": "38e4b179-cd17-4e4a-95a5-892d5fd9a2f6",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "@app.basecamp.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "credentials": {}
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Skip self-sent emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Send a text message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skip self-sent emails": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Get a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
