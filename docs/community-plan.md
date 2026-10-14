@@ -89,3 +89,79 @@ Bots activate **after** the brand accounts exist and our Discord server is live 
 - At least three tactics learned from the community folded back into the path.
 - People arriving at the repo from conversations, not ads.
 - Zero spam complaints, zero rule violations. Growth that costs us our welcome isn't growth.
+
+---
+
+## Forums to enter (verified Oct 2026)
+
+Researched and checked October 13, 2026. Sizes are approximate (GummySearch/DISBOARD snapshots, Oct 2026); Reddit no longer shows raw subscriber counts in its own UI, so treat sizes as planning numbers, not gospel. Rules change — re-read each room's sidebar before the first post, every time.
+
+### Tier A — Small business / entrepreneur (core audience)
+
+| Community | Approx. size | What it's for | Self-promo rules | New-account gates | Verdict |
+|---|---|---|---|---|---|
+| r/smallbusiness | ~2.6M | Owners asking/answering practical questions about starting, running, growing | Strict: main feed is questions only; promotion only in the weekly Promote-your-business thread; relevant business mentions in replies tolerated if not repeated and not the account's main purpose | No published sub-specific karma gate; Reddit-wide new-account spam filters apply — comment-first ramp is essential | **Enter at launch** (listen + answer; promo thread only for promotion) |
+| r/EntrepreneurRideAlong | ~734K | Founders documenting the journey in real time — ride-along stories, lessons, struggles | Moderate: journey/lessons framing is the native format; blatant ads and guru content get removed | No published karma gate found; journey posts from brand-new accounts draw scrutiny — comment first | **Enter at launch** — best structural fit for the "$0 stack" process post |
+| r/sweatystartup | ~212K | Owners of "boring" service businesses — cleaning, trades, home services; heavy discussion of CRM, marketing, leads | Moderate: value-first; self-promo threads exist but drive-by pitching is removed | No published karma gate found | **Enter at launch** — highest ICP density of any Tier A room |
+| r/Entrepreneur | ~4.8–5.25M | General entrepreneurship discussion | Strict: text posts only, no promotion outside weekly threads (Thank You Thursday etc.), AI-generated content banned outright | **Hard gate: 10 comment karma earned inside r/Entrepreneur required before posting** | **Enter later** — join and comment at launch; post only after the in-sub karma gate is cleared |
+| r/GrowthHacking | ~160K | Growth/marketing experiments, tools, startup growth stories | Moderate: experiments and results welcome; pure pitching is removed | No published karma gate found | **Enter later** (phase 2 — good home for grading-loop numbers posts) |
+| r/marketing | ~2.0M | Marketing professionals discussing strategy and industry topics | Strict: self-promotion is banned (permanent-ban territory); AI-generated content also banned | High informal bar for new accounts | **Listen only at launch** — Step 12 research value; do not post as a brand early |
+| r/digital_marketing | ~309K | Digital marketing practitioners | Strict: promotion banned; no offering services; no link submissions to blogs/articles/videos | New-account filters in force | **Listen only / enter much later, as a person answering questions — never to pitch** |
+| r/SmallBusinessMarketing | Small (unverified) | Name appears in curated marketing-sub lists in exactly this niche | Could not verify current rules/activity from public sources | Unknown | **Enter later** — verify activity in-app before investing time; not load-bearing |
+
+### Tier B — Trades & service-business verticals (ICP rooms)
+
+These rooms skew technician/employee, not owner — they are listening posts for Step 12 research (pain points, in their own words) and places to be genuinely useful, not channels to pitch in.
+
+| Community | Approx. size | Reality check | Verdict |
+|---|---|---|---|
+| r/HVAC | ~246K | For trade technicians (homeowners are redirected to r/hvacadvice); mostly technique, career, and tools — but owner threads (e.g., one-truck revenue talk) do appear | **Enter later, listening-first** — answer business questions only where they genuinely arise |
+| r/Plumbing | ~570K | Advice/help community; its own description says do not advertise or compare pricing; overwhelmingly DIY/technical | **Skip as a channel** — Step 12 listening only, no participation plan |
+| r/Construction | ~595K | Construction professionals only; jobs/technique/safety dominate; a Business flair exists and occasional contractor-tool feedback posts survive | **Enter later, listening-first** — occasional business-flair participation once credibility exists |
+| r/Contractor, r/handyman | Unverified | Could not verify size/activity from public listings | **Skip for launch** — revisit if a specific active owner thread surfaces via listening alerts |
+
+### Tier C — AI-for-business & the veteran angle (Step 12 research)
+
+| Community | Approx. size | What it's for | Verdict |
+|---|---|---|---|
+| r/ChatGPT | Very large (multi-million) | Consumer AI chatter, tips, news | **Listen only** — trend radar for Step 12; too broad and noisy to build presence in |
+| r/artificial | ~1.2M | AI news and discussion; self-promo restricted | **Listen only** — research input, not a participation target |
+| r/AIforBusiness-type subs | — | No established, verifiable subreddit under this name surfaced in research (the "AI For Business" presence that exists is a LinkedIn page, not a Reddit community) | **Skip** — the AI-for-business conversation for our ICP is happening inside Tier A rooms (r/sweatystartup discusses CRM/AI tools constantly), not in a dedicated sub |
+| r/Veterans | ~181K | Veteran support and benefits community — VA issues, mental health, GI Bill, careers; business is a minor theme and the room's purpose is support | **Do NOT market here.** Keith may participate personally and genuinely as a veteran where he can help; the brand stays out. Any veteran-entrepreneur outreach belongs in business rooms and veteran-business orgs (SBA VBOC, Warrior Rising-type programs), not a support community |
+
+### Discord — servers to join as a participant
+
+Verified as listed and public on DISBOARD, October 2026. Join route for all: DISBOARD listing → Join button → discord.gg invite. Rules in these servers generally prohibit spam/unsolicited pitching — participate as a person first.
+
+| Server | Approx. size | Focus | Verdict |
+|---|---|---|---|
+| COESO | ~2.5K members (~139 online at check; bumped within hours — actively maintained) | Entrepreneurs across ecom, SaaS, marketing, sales, content; role-based vertical channels, mock calls, wins/resources | **Join at launch** — right size to be known in; active, not a ghost town |
+| RoundTable | Listed on DISBOARD (member count not displayed at check) | Entrepreneurs, founders, freelancers; business/startup discussion, marketing/sales/AI channels, accountability; explicitly "no spam, no fake gurus" | **Join at launch** — culture matches our rules of engagement |
+| Mind Miners | Small / pre-launch beta (count not displayed) | Professionals and side-hustlers; failure-sharing, brainstorming, weekly founder-led calls; no upsells/spam | **Join at launch** — early-member advantage; small rooms are where real conversations happen |
+| GrowthGrid | Listed on DISBOARD (count not displayed) | Entrepreneurs, creators, freelancers; no-spam positioning | **Optional 4th** — join if bandwidth allows after the first three |
+
+### Launch sequence — the first rooms
+
+Enter **seven rooms at launch**, in this order:
+
+1. **r/sweatystartup** — densest ICP fit; our process content is native here.
+2. **r/smallbusiness** — the core audience at scale; answers build the account.
+3. **r/EntrepreneurRideAlong** — the journey format is literally our content model.
+4. **COESO (Discord)** — small, active, vertical channels.
+5. **RoundTable (Discord)** — culture fit; AI/marketing channels on-topic.
+6. **Mind Miners (Discord)** — early-member positioning in a no-guru room.
+7. **r/Entrepreneur (comments only)** — start the in-sub comment-karma clock toward the 10-karma posting gate from day one, without posting.
+
+Phase 2 (after the account has standing): r/GrowthHacking posts, r/Construction business-flair participation, r/SmallBusinessMarketing if verified active. Listen-only from day one: r/marketing, r/digital_marketing, r/ChatGPT, r/artificial, r/HVAC.
+
+### The fresh-account reality (Reddit)
+
+- A brand-new powertiesbiz account starts at zero. Reddit-wide spam systems aggressively filter new/low-karma accounts, and many rooms add their own gates — the one hard number we verified is **r/Entrepreneur's 10 in-sub comment karma before posting**.
+- Creating our own subreddit is gated too: Reddit's commonly documented requirement is an account **at least ~30 days old with roughly ~50 combined karma** (Reddit doesn't publish the exact figure; treat 30 days + steady real participation as the floor, not a target to game).
+- **The Step 12 two-week listening period doubles as the karma-building period.** Listening → helpful comments (no links, no brand mentions) → first posts (in the promo-tolerant threads/formats only) → mentions only where a conversation genuinely calls for them. This isn't a delay in the plan; it is the plan, and it's exactly the cadence the approved bot design supports (listening alerts + drafted replies + Keith approves).
+- Never buy karma, never use vote rings, never run multiple accounts to talk to each other. One account, one person, disclosed as the brand.
+
+### Our own rooms to create
+
+- **Discord server (create at launch — no gate):** a Discord account can create a server immediately. Setup: server name powertiesbiz, channels mirroring the path (#start-here with the path link, #whats-working, #show-your-stack, #introductions, #help-desk), the disclosed helper bot per the approved design once live, DISBOARD listing after basic setup so the room is discoverable.
+- **r/powertiesbiz (create when eligible):** the name was not checked for availability (Reddit blocks the check from our tooling) — confirm at creation time. Eligibility per above (~30-day-old account, ~50 karma). Until then, Keith's profile page is the brand's Reddit home: pin the "$0 stack" post there. When created, the subreddit is the archive: path updates, monthly numbers, community tactics roundups.
