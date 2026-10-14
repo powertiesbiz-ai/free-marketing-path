@@ -32,7 +32,9 @@ The full blueprint — goals, why each step matters, exact tools, costs, time es
 
 ## Use the interactive UI
 
-Open **[index.html](index.html)** in a browser (or use this repo's GitHub Pages site) and walk the path step by step. Each step expands to its goal, tools, cost, time, and checklist. Check items off as you complete them and watch the progress bar move.
+**Live site: [powertiesbiz-ai.github.io/free-marketing-path](https://powertiesbiz-ai.github.io/free-marketing-path/)** — or open **[index.html](index.html)** in a browser. Walk the path step by step: each step expands to its goal, tools, cost, time, and checklist. Check items off as you complete them and watch the progress bar move.
+
+The site also carries the funnel live, exactly as Step 5 teaches it: the path points to **[MLOT](mlot.html)** — our free Money Left on the Table diagnostic that finds where a business is losing time and money — and MLOT points to **[the $99 AI working session](ai-session.html)**, the paid offer that designs the fix. Free path → free diagnostic → $99 session.
 
 Your progress is saved **only in your own browser** (localStorage). There is no account, no database, and nothing about you is collected — ever. There's a "Reset progress" button when you want a clean slate.
 
@@ -47,3 +49,4 @@ Walked the path and found a better free tool? A step that's out of date? A tacti
 ## License
 
 MIT — see [LICENSE](LICENSE). Take it, use it, share it. If it helps your business, the best thanks is telling another owner.
+
