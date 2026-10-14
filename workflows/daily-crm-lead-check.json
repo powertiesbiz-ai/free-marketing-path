@@ -1,0 +1,160 @@
+{
+  "name": "Daily CRM Lead Check",
+  "nodes": [
+    {
+      "id": "05f91ce5-f090-4765-85bf-463718bc0aa7",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-lead-check",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "2b2c7fe7-6abd-4c5e-933d-3fac61c56cea",
+      "name": "Check Secret",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.secret }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              },
+              "rightValue": "__replace__",
+              "singleValue": true
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "7fc6171a-a9f9-493f-9631-bfaeda29e463",
+      "name": "Get Recent Leads",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        680,
+        300
+      ],
+      "parameters": {
+        "resource": "lead",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100
+      },
+      "credentials": {}
+    },
+    {
+      "id": "c7003cbe-905c-4bc4-b3dc-36c91500e08a",
+      "name": "Filter Last 24h",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const cutoff = Date.now() - 24*60*60*1000;\nconst leads = [];\nfor (const item of $input.all()) {\n  const l = item.json;\n  const created = new Date(l.Created_Time).getTime();\n  if (!isNaN(created) && created >= cutoff) {\n    leads.push({\n      name: [l.First_Name, l.Last_Name].filter(Boolean).join(' '),\n      company: l.Company || '',\n      email: l.Email || '',\n      source: l.Lead_Source || '',\n      created: l.Created_Time\n    });\n  }\n}\nreturn [{json: {count: leads.length, leads}}];"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "303230c6-6dd9-43d2-8d52-f6bde29edbf0",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "credentials": {}
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Check Secret",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Secret": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Leads",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Leads": {
+      "main": [
+        [
+          {
+            "node": "Filter Last 24h",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Last 24h": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
