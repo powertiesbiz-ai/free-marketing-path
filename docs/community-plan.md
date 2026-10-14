@@ -34,7 +34,7 @@ The community is Step 9 of [the path](the-path.md), done in public. We show up w
 >
 > The whole stack: a static website on free hosting (Cloudflare Pages) with a lead-capture form; Google Business Profile + Search Console so we get found; a homepage FAQ written the way people ask AI tools, with FAQ schema so ChatGPT/Gemini can quote us; two scheduled posts a week via Buffer's free tier; a free diagnostic quiz (we call it MLOT) that prescribes our one paid offer; Square payment links + online booking so nobody emails back and forth; Zoho CRM + n8n automation so every reply and lead lands in the CRM — with a hard rule that a human approves anything before it sends; a review ask after every job plus the free directory listings (Bing, Apple, Yelp, BBB, Nextdoor); showing up in communities like this one; referral partnerships and barter with businesses that serve the same customers; and a small daily outreach habit — about 10 verified emails a day, graded weekly.
 >
-> Total recurring cost: ≈$15/mo for the little server that runs the automation. That's it — everything else is free tiers and elbow grease.
+> Total recurring cost: $0 if you run it bare. We choose to spend ≈$56/mo all-in — $20 for the AI ring leader that runs it, ≈$21 for research help, ≈$15 for the little server — because speed is worth it to us. Every paid line has a $0 route. Everything else is free tiers and elbow grease.
 >
 > I wrote the whole thing up as a free, open step-by-step path (link in comments / my profile — it's a GitHub repo called free-marketing-path, MIT licensed, take whatever's useful).
 >
