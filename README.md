@@ -49,6 +49,12 @@ Not sure where to start? Take the five-question **[Stuck-On Quiz](quiz.html)**: 
 
 We publish our own numbers in the **[Proof Log](docs/proof-log.md)** (also as a **[web page](proof-log.html)**): sent, delivered, replied, paid, revenue, socials, what changed, and what we learned — including the zeros. The same document discloses **what PowerTies actually runs and pays**, with Tank named as the ring leader who coordinates the system.
 
+## The research
+
+This project is also an experiment, and it says so on its face. **[docs/thesis-and-research.md](docs/thesis-and-research.md)** states the claim we're testing — a complete marketing system no longer needs meaningful money or technical skill, because the operator role can now be filled by an AI ring leader — along with what would prove it, what would refute it, the five research questions we're asking the field, and the known limits of the evidence so far.
+
+Walked a step and got a result — good or bad? File a **[field report](templates/field-report.md)**: one real attempt, cash and hours counted, numbers straight. You choose whether it's published with your business name, anonymized, or kept research-only; we never publish a name without that choice.
+
 ## Workflows — import the wiring
 
 Sanitized, importable n8n exports live in **[workflows/](workflows/)**: Gmail-to-Zoho CRM automation, the Email Draft Assistant, the Daily CRM Lead Check, and Outreach Reply to Zoho Lead. Credentials, webhook comparison values, chat IDs, and personal addresses have been removed or replaced. Start with **[workflows/README.md](workflows/README.md)** for the credential and replacement checklist. The design rule stays attached to the machinery: **a human approves every outward send.**
