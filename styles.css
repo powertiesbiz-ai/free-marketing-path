@@ -240,3 +240,19 @@ a { color: var(--accent); }
   .step-meta dt { margin-top: 6px; }
 }
 
+/* Proof-log tables */
+.table-wrap { overflow-x: auto; margin: 14px 0; }
+.data-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.data-table th, .data-table td { border: 1px solid var(--line); padding: 9px 10px; text-align: left; vertical-align: top; }
+.data-table th { background: var(--bg); }
+
+/* Stuck-on quiz */
+.quiz-form { margin-bottom: 20px; }
+.quiz-question legend { font-weight: 700; font-size: 1.08rem; padding: 0 6px; }
+.quiz-question label { display: inline-flex; align-items: center; gap: 8px; margin: 8px 18px 8px 0; cursor: pointer; }
+.quiz-question input[type="radio"] { width: 20px; height: 20px; accent-color: var(--accent); }
+.quiz-error { color: #9b1c1c; font-weight: 700; }
+.quiz-submit { border: none; font: inherit; cursor: pointer; }
+.quiz-result { border-color: var(--accent); }
+@media (max-width: 560px) { .data-table { min-width: 460px; } }
+
