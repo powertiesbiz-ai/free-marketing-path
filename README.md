@@ -12,7 +12,7 @@ Solo owners and small teams who do good work and are invisible online — and wh
 
 ## The promise
 
-**$0 or near-$0 at every step.** Where PowerTies spends a little, we say so plainly: the only recurring cost in our whole stack is a ~$13.49/mo small server that runs our automation (Step 7) — and even that has a $0 alternative (run it on your own computer). If a step ever costs real money, the doc says how much and why.
+**$0 or near-$0 at every step.** Where PowerTies spends a little, we say so plainly: the only recurring cost in our whole stack is a ≈$15/mo small server that runs our automation (Step 7) — and even that has a $0 alternative (run it on your own computer). If a step ever costs real money, the doc says how much and why.
 
 ## The path
 
@@ -38,6 +38,32 @@ The full blueprint — goals, why each step matters, exact tools, costs, time es
 The site also carries the funnel live, exactly as Step 5 teaches it: the path points to **[MLOT](mlot.html)** — our free Money Left on the Table diagnostic that finds where a business is losing time and money — and MLOT points to **[the $99 AI working session](ai-session.html)**, the paid offer that designs the fix. Free path → free diagnostic → $99 session.
 
 Your progress is saved **only in your own browser** (localStorage). There is no account, no database, and nothing about you is collected — ever. There's a "Reset progress" button when you want a clean slate.
+
+## Quiz — which step are you stuck on?
+
+Not sure where to start? Take the five-question **[Stuck-On Quiz](quiz.html)**: it routes you to the earliest missing step — website, Google presence, weekly content, lead magnet, or CRM follow-up — and links you straight to that step on the path. If you want the deeper business diagnostic instead, that is **[MLOT](mlot.html)**, and it is free.
+
+## Proof log
+
+We publish our own numbers in the **[Proof Log](docs/proof-log.md)** (also as a **[web page](proof-log.html)**): sent, delivered, replied, paid, revenue, socials, what changed, and what we learned — including the zeros. The same document discloses **what PowerTies actually runs and pays**, with Tank named as the ring leader who coordinates the system.
+
+## Workflows — import the wiring
+
+Sanitized, importable n8n exports live in **[workflows/](workflows/)**: Gmail-to-Zoho CRM automation, the Email Draft Assistant, the Daily CRM Lead Check, and Outreach Reply to Zoho Lead. Credentials, webhook comparison values, chat IDs, and personal addresses have been removed or replaced. Start with **[workflows/README.md](workflows/README.md)** for the credential and replacement checklist. The design rule stays attached to the machinery: **a human approves every outward send.**
+
+## Templates
+
+Copy-and-use files live in **[templates/](templates/)**:
+
+- **[One-page barter agreement](templates/barter-agreement.md)**
+- **[Review request email](templates/review-request-email.md)**
+- **[Pains log](templates/pains-log.md)**
+- **[Weekly outreach grading sheet](templates/outreach-grading-sheet.md)**
+- **[Website launch checklist](templates/website-launch-checklist.md)**
+
+## Teardowns
+
+The **[free marketing teardown program](docs/teardowns.md)** walks a consenting community volunteer's funnel in public: offer, website, Google presence, content, funnel to booking, and follow-up. The volunteer gets a written mini-diagnostic; the community gets a real case to learn from; the teardown template is included.
 
 ## The community
 
