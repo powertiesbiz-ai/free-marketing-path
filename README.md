@@ -2,7 +2,7 @@
 
 *by [powertiesbiz](https://github.com/powertiesbiz-ai)*
 
-A step-by-step guided path that walks a small-business owner through marketing their business for **free — or as close to free as honestly possible** — by setting up the exact system PowerTies runs today: website, SEO, AI-search visibility, content, a quiz funnel, booking and payment, CRM + automation, reviews, community, partnerships, and measured outreach.
+A step-by-step guided path that walks a small-business owner through marketing their business for **free — or as close to free as honestly possible** — by setting up the exact system PowerTies runs today: website, SEO, AI-search visibility, content, a quiz funnel, booking and payment, CRM + automation, reviews, community, partnerships, measured outreach, and niche research.
 
 No hype, no $2,000 course, no "growth hacks." Just the real stack, the real tools, and the real numbers.
 
@@ -27,6 +27,7 @@ Solo owners and small teams who do good work and are invisible online — and wh
 9. **Community** — Be a known, helpful regular in the places your buyers already hang out.
 10. **Partnerships & barter** — Trade skill, audience, and trust instead of cash — grow through other people's customers and capabilities.
 11. **Outreach + measurement** — A small, honest, measurable flow of new conversations — and the discipline to know whether it's working.
+12. **Find your niche and research the solution** — Aim the whole system at one niche: learn its real problems, in their own words, from open resources, AI, and the forums where they talk — then join the conversation.
 
 The full blueprint — goals, why each step matters, exact tools, costs, time estimates, checklists, and how PowerTies does it — lives in **[docs/the-path.md](docs/the-path.md)**.
 
