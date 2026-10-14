@@ -38,7 +38,7 @@ A report of a **flop** is as valuable as a win — negative results are half the
 - **Business type / trade:** Business consulting
 - **Town / region:** Queens, NY
 - **Tactic tried:** Step 11 — outreach (scored lead list, verified emails, small daily batches)
-- **Cash spent:** ≈$0 attributable to the tactic, out of a total stack of ≈$36/month
+- **Cash spent:** ≈$0 attributable to the tactic, out of ≈$36/month in paid path tools (≈$56/month all-in for PowerTies, ring-leader platform included)
 - **Hours spent:** Not separately tracked for this baseline period — which is itself one of the things this project is trying to start measuring (research question 3)
 - **What exactly was done:** Built a lead queue of founder/CEO contacts at small US businesses, scored each lead for fit, verified email addresses before sending, sent personalized outreach emails in batches of about 10 per weekday starting October 1, 2026, and logged every send, bounce, and reply.
 - **Result:** 79 sent / 55 delivered / 27 bounced / **0 replies, $0 revenue** as of October 13, 2026.
