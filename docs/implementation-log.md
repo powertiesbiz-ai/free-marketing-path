@@ -66,3 +66,28 @@ this file is the build diary behind them.
 - Status: listening phase. The rules of engagement — question-first, no
   self-promotion, the owner approves everything posted — are in the
   community plan.
+
+## Oct 14, 2026 — Plan B1 build: the Nurture Engine
+
+- The sending engine is built: a new n8n workflow, "Quiz Nurture
+  Engine," holds each subscriber's send schedule (Days 1/3/7/12) in its
+  own static data and runs a daily sender.
+- Suppression is checked first: the sender reads Kit's `booked-99` tag
+  membership before any send, and the design is fail-closed — if the Kit
+  check errors, nothing sends at all.
+- The Square Payment Notifications workflow gained a "Kit — Tag
+  Booked-99" node, so a completed $99 booking tags the buyer in Kit and
+  the nudges stop. Its pre-existing nodes are untouched.
+- The quiz branch (add subscriber + tag in Kit, record the schedule) was
+  built and tested end to end on a copy of Quiz Lead Capture: Zoho lead
+  created, the immediate email sent, the schedule recorded. Every new
+  node is continue-on-fail, so a Kit outage can never break the live
+  funnel.
+- The last blocker fell tonight: the owner created the Kit credential
+  inside n8n itself (Header Auth). It sits under n8n's default title,
+  "Header Auth Account" — it is identified by its header name
+  (X-Kit-Api-Key), not by the title.
+- Finish underway, stated honestly: attaching that credential to the
+  four Kit nodes, running the two held tests (a real Day-1 send; proof
+  that a booked subscriber is suppressed), then swapping the branch into
+  the live Quiz Lead Capture workflow. Not live yet.
