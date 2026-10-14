@@ -101,12 +101,12 @@ A system can be busy and still produce zero revenue. Activity is not proof. The 
 
 The path in this repo is written so a reader can run it at $0. This table is different: it discloses the actual PowerTies setup, including the places where PowerTies chooses to pay for speed or convenience.
 
-**The path itself is runnable at $0; PowerTies chooses to spend ≈$36/mo (Claude ≈$21/mo + the VPS ≈$15/mo) for speed — convenience spend, not required spend.**
+**The path itself is runnable at $0. What PowerTies actually spends, all-in, is ≈$56/mo — and most of it is convenience, not requirement: Tank's platform ≈$20/mo, Claude ≈$21/mo, and the VPS ≈$15/mo. Every paid line below has a $0 route (fill the ring-leader role yourself or with a free open-source agent, do the research manually, run n8n on your own computer). This table is what PowerTies chooses to run — not what a reader must spend.**
 
 | Part of the system | What PowerTies actually runs | What it does | Cost / terms |
 |---|---|---|---|
-| **Ring leader** | **Tank — AI agent (Muse)** | **Coordinates the whole system: runs outreach end-to-end (verification, sending, grading), maintains the website, CRM, and automations, directs the research leg (Claude) and the workflow layer (n8n), and reports results. Keith approves outward actions.** | Part of Keith's Muse subscription (his AI-assistant platform); no separate Muse price is stated here. A reader can fill the ring-leader role manually or with an AI assistant — the role is what the system needs. |
-| Lead research | Claude, paid plan | The lead-research leg of outreach: finds company names and why they fit. Tank then verifies every email address and handles sending. | About $21/mo |
+| **Ring leader** | **Tank — AI agent (Muse)** | **Coordinates the whole system: runs outreach end-to-end (verification, sending, grading), maintains the website, CRM, and automations, directs the research leg (Claude) and the workflow layer (n8n), and reports results. Keith approves outward actions.** | $20/mo — Keith's Muse access (October 2026 figure). The ROLE is what the system needs, not this platform: a reader can fill it manually for $0, or with a free open-source agent (see OpenClaw, below). |
+| Lead research (optional) | Claude, paid plan | The lead-research leg of outreach: finds company names and why they fit. Tank then verifies every email address and handles sending. **Under review (October 2026): the ring leader can absorb the research leg — Claude is a second, independent researcher, not a dependency.** | About $21/mo |
 | Lead data, optional | Apollo.io, free tier | An optional accelerator for lead data. PowerTies' Apollo leg is currently paused until its October 24, 2026 credit refresh. | Free tier: 75 credits/month |
 | Workflow automation | n8n, self-hosted on a Hetzner VPS | Runs the workflow layer under Tank's direction: email/CRM automations, lead checks, notifications, and approval-based drafting flows. | ≈$15/mo |
 | Workflow AI | Groq, free tier | Powers the AI drafting and summarizing inside the n8n email workflows. | Free tier |
