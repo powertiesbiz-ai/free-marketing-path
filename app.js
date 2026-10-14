@@ -107,7 +107,7 @@ const STEPS = [
     "goal": "Every lead, reply, and customer tracked in one place — software does the busywork, and a human approves anything that leaves the building.",
     "why": "Leads die in inboxes. A CRM remembers what you won't, and automation handles the filing, summarizing, and reminding. The rule that keeps it safe: AI can draft; a human approves every outward send.",
     "tools": "Zoho CRM (a free tier exists); n8n for workflow automation (self-hosted); your existing email account.",
-    "cost": "$0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.",
+    "cost": "$0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock. You can run n8n on your own computer for $0. (The VPS is one line in PowerTies' ≈$56/mo all-in spend — ring-leader platform and research tools included; the full ledger is in the proof log.)",
     "time": "A weekend to wire the basics; an hour here and there to improve it.",
     "checklist": [
       "Set up Zoho CRM (free tier) with Leads and Contacts",
