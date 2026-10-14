@@ -1,6 +1,6 @@
 # The Path — the full blueprint
 
-This is the exact system PowerTies (a one-person consulting business in Queens, NY) runs to market itself for $0 — with one honest exception, a ~$13.49/mo server for automation, covered at Step 7. Every step is $0 or near-$0, every tool named is the real tool, and every step includes how we actually do it.
+This is the exact system PowerTies (a one-person consulting business in Queens, NY) runs to market itself for $0 — with one honest exception, a ≈$15/mo server for automation, covered at Step 7. Every step is $0 or near-$0, every tool named is the real tool, and every step includes how we actually do it.
 
 **The principles underneath all of it:**
 
@@ -9,6 +9,14 @@ This is the exact system PowerTies (a one-person consulting business in Queens, 
 - A human approves every outward send. Automation files, drafts, and reminds — people talk to people.
 - Measure honestly. Small numbers you trust beat big numbers you imagine.
 - Win-win-win. Good for you, good for your partners, good for the customer — or don't do it.
+
+### The ring leader
+
+A path like this produces work in every direction: research, verification, publishing, scheduling, follow-up, measurement, and maintenance. Somebody — or something — has to coordinate it, notice what is late, and report what the numbers say.
+
+PowerTies assigns that role to Tank, an AI agent, with Keith as approver. Tank coordinates the research, verification, website and CRM work, automations, outreach, and reporting; Keith approves outward actions. A solo owner can wear the ring-leader hat themselves for $0. The cost is time — which is exactly why PowerTies automated the role.
+
+You can also staff the ring leader for $0 with an open-source agent framework — PowerTies runs a second agent, Jada, on OpenClaw with free model backends (Groq/OpenRouter free tiers) handling its Telegram command interface. Honest caveats: free tiers rate-limit on heavy work, and setup takes some technical comfort — but the role does not require a paid assistant.
 
 ## Step 1: Website — your home base
 
@@ -150,7 +158,7 @@ This is the exact system PowerTies (a one-person consulting business in Queens, 
 
 **Tools:** Zoho CRM (a free tier exists); n8n for workflow automation (self-hosted); your existing email account.
 
-**Estimated cost:** $0 on the free CRM tier. Honesty note: PowerTies pays about $13.49/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.
+**Estimated cost:** $0 on the free CRM tier. Honesty note: PowerTies pays ≈$15/mo for a small VPS so n8n runs around the clock — it is the only recurring cost in this entire stack. You can run n8n on your own computer for $0.
 
 **Estimated time:** A weekend to wire the basics; an hour here and there to improve it.
 
@@ -162,7 +170,7 @@ This is the exact system PowerTies (a one-person consulting business in Queens, 
 - [ ] Add a daily lead summary so a new lead never sits unseen
 - [ ] Write down your one inviolable rule: no automated outward sends without human approval
 
-**How PowerTies does it:** n8n runs our email triage (AI-drafted replies that a human approves before sending), CRM lead creation, a morning lead digest, and Square payment handling. It all runs on that one $13.49/mo VPS — everything else in the stack is free.
+**How PowerTies does it:** n8n runs our email triage (AI-drafted replies that a human approves before sending), CRM lead creation, a morning lead digest, and Square payment handling. It all runs on that one ≈$15/mo VPS — everything else in the stack is free.
 
 ## Step 8: Reviews + directories
 
@@ -242,9 +250,9 @@ This is the exact system PowerTies (a one-person consulting business in Queens, 
 
 **Why it matters:** Most outreach fails quietly because nobody measures it. A scored list, verified emails, small daily batches, and a weekly grading loop turn guessing into a system you can actually improve.
 
-**Tools:** Your own lead research (search, directories, community listening from Step 9); an email verifier before sending; your CRM for tracking; a simple grading routine — a spreadsheet works.
+**Tools — the actual PowerTies setup:** Claude (paid plan) is the lead-research leg: it finds company names, their location/context, and why each company fits. Apollo.io's free tier is an optional lead-data accelerator — PowerTies' Apollo leg is currently paused until its October 24, 2026 credit refresh. Tank coordinates this pooled model, verifies every address, and sends. Zoho CRM holds the records, and a spreadsheet or grading-sheet template is enough for the weekly grade. The generic route still works: do the research yourself with search, directories, and community listening from Step 9 — and never send to an address you have not verified.
 
-**Estimated cost:** $0 to near-$0. Verifiers have free tiers; the discipline is free.
+**Estimated cost:** $0 to near-$0 for the generic route. PowerTies chooses Claude at ≈$21/mo for research speed; Apollo is optional on its free tier. Verifiers have free tiers; the discipline is free.
 
 **Estimated time:** About 30 minutes a day for sends; an hour a week to grade.
 
@@ -257,7 +265,7 @@ This is the exact system PowerTies (a one-person consulting business in Queens, 
 - [ ] Grade weekly: which score bands and sources produced replies? Refine your criteria from the evidence, not from vibes
 - [ ] Set a 30-day checkpoint in advance: if replies are still zero, diagnose the real cause — deliverability, message, targeting, offer, channel — instead of just sending more
 
-**How PowerTies does it:** Our outreach engine runs exactly this loop: roughly 10 verified emails a day, a fit-scoring model, a Sunday grading report, and a hard 30-day checkpoint. Early lesson, learned the expensive way: guessed email addresses were our biggest source of bounces. Removing guessing was the single biggest deliverability fix we ever made.
+**How PowerTies does it:** Our outreach engine is pooled: Claude finds companies and makes the fit case, Tank verifies the published addresses and sends roughly 10 a day, and the results run through a fit-scoring model, a Sunday grading report, and a hard 30-day checkpoint. Early lesson, learned the expensive way: guessed email addresses were our biggest source of bounces. Removing guessing was the single biggest deliverability fix we ever made.
 
 ## Step 12: Find your niche and research the solution
 
