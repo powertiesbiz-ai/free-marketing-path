@@ -183,6 +183,53 @@ a { color: var(--accent); }
   padding-bottom: 44px;
 }
 
+
+/* Site nav + standalone pages (MLOT, $99 session) */
+.site-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.site-nav a {
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.site-nav a:hover { border-color: var(--muted); }
+.site-nav a[aria-current="page"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.page-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 20px 20px;
+  margin-bottom: 14px;
+}
+.page-card h2 { font-size: 1.2rem; margin: 18px 0 8px; }
+.page-card ul, .page-card ol { padding-left: 22px; }
+.page-card li { padding: 3px 0; }
+
+.cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  margin: 6px 0;
+}
+.cta-btn:hover { filter: brightness(1.08); }
+
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .site-head { padding-top: 26px; }
@@ -192,3 +239,4 @@ a { color: var(--accent); }
   .step-meta { grid-template-columns: 1fr; }
   .step-meta dt { margin-top: 6px; }
 }
+
