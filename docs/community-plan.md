@@ -165,3 +165,34 @@ Phase 2 (after the account has standing): r/GrowthHacking posts, r/Construction 
 
 - **Discord server (create at launch — no gate):** a Discord account can create a server immediately. Setup: server name powertiesbiz, channels mirroring the path (#start-here with the path link, #whats-working, #show-your-stack, #introductions, #help-desk), the disclosed helper bot per the approved design once live, DISBOARD listing after basic setup so the room is discoverable.
 - **r/powertiesbiz (create when eligible):** the name was not checked for availability (Reddit blocks the check from our tooling) — confirm at creation time. Eligibility per above (~30-day-old account, ~50 karma). Until then, Keith's profile page is the brand's Reddit home: pin the "$0 stack" post there. When created, the subreddit is the archive: path updates, monthly numbers, community tactics roundups.
+
+## Question-first entry (Keith's strategy)
+
+**The strategy in one line: NO self-promotion.** We enter rooms by asking owners what no-cost/low-cost promotion methods actually work for them. The answers are Step 12 research in owners' own words — and, over time, the raw material for this repo's resource library.
+
+### Why it fits the rooms
+
+The verified forums research (above) makes the shape obvious:
+
+- **r/smallbusiness' main feed is questions-only** — promotion is confined to a weekly thread. A genuine question isn't a workaround there; it's the native format.
+- **r/Entrepreneur requires 10 in-sub comment karma before posting**, so comments and questions come first by rule, not just by courtesy.
+- **Listen-only rooms (r/marketing, r/digital_marketing)** still yield research value from others' threads — the questions we can't ask yet are often already being answered.
+
+### The discipline
+
+- **One question per room, tailored** — same spirit everywhere, never copy-pasted identically.
+- **No links.** Not in the question, not slipped into a comment. If someone asks for the resource directly, that's a different moment with its own rules.
+- **Stay in the comments and ask follow-ups** — the follow-up is where the real methods surface ("what did that cost you in time?" beats any top-level answer).
+- **Log the answers** into the pains/methods log weekly. A thread that isn't logged is research thrown away.
+
+### Draft questions
+
+1. **r/smallbusiness:** "What's one no-cost or low-cost thing that actually brought you a customer this year? Not theory — the thing that worked."
+2. **r/sweatystartup:** "Service business owners: what's your cheapest reliable way to get the phone to ring? Referrals, Google profile, yard signs, something else?"
+3. **r/Entrepreneur** (as comments/engagement until the karma gate clears): "Bootstrappers: what free marketing channel surprised you by actually converting?"
+4. **Trades rooms** (listening-phase, where permitted): "Shop owners — if you had $0 for marketing this month, what would you do first?"
+5. **Discord servers** (the conversational version): "Curious what everyone's doing for marketing that costs nothing or close to it — what's actually working for you lately?"
+
+### Launch order
+
+The questions roll out per the Forums section's launch sequence — **r/sweatystartup and r/smallbusiness first** — and only after the account exists and a short listening period in each room. Listening first, one tailored question, then the comments do the rest.
