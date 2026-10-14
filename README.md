@@ -6,7 +6,7 @@ A step-by-step guided path that walks a small-business owner through marketing t
 
 No hype, no $2,000 course, no "growth hacks." Just the real stack, the real tools, and the real numbers.
 
-Built and run by a business owner who doesn't code — directed in plain language, executed and verified by an AI ring leader; Tank is part of Keith's existing Muse access, so the role costs him nothing extra beyond that access. If you can describe what you want, you can run this system.
+Built and run by a business owner who doesn't code — directed in plain language, executed and verified by an AI ring leader; Tank runs on Keith's Muse access at $20/month — but the ring-leader ROLE costs $0 to fill: wear the hat yourself, or staff it with a free open-source agent. If you can describe what you want, you can run this system.
 
 ## Who it's for
 
@@ -14,7 +14,7 @@ Solo owners and small teams who do good work and are invisible online — and wh
 
 ## The promise
 
-**$0 or near-$0 at every step.** Where PowerTies spends a little, we say so plainly: the only recurring cost in our whole stack is a ≈$15/mo small server that runs our automation (Step 7) — and even that has a $0 alternative (run it on your own computer). If a step ever costs real money, the doc says how much and why.
+**$0 or near-$0 at every step.** Where PowerTies spends a little, we say so plainly: our entire all-in spend is ≈$56/mo — a ≈$15/mo small server that runs our automation (Step 7), a ≈$21/mo Claude plan that speeds up lead research (Step 11), and $20/mo for the Muse access our AI ring leader (Tank) runs on — and every one of those has a $0 alternative (run n8n on your own computer, do the research manually, fill the ring-leader role yourself or with a free open-source agent). The full ledger is in the [proof log](docs/proof-log.md). If a step ever costs real money, the doc says how much and why.
 
 ## The path
 
