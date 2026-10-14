@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which Step Are You Stuck On? — Free Marketing Path Quiz</title>
+<meta name="description" content="Answer five plain questions and find the earliest step of the Free Marketing Path that needs your attention.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-head">
+  <nav class="site-nav" aria-label="Site">
+    <a href="index.html">The Path</a>
+    <a href="proof-log.html">Proof Log</a>
+    <a href="quiz.html" aria-current="page">Quiz</a>
+    <a href="mlot.html">MLOT</a>
+    <a href="ai-session.html">$99 AI Session</a>
+  </nav>
+  <h1>Which step are you stuck on?</h1>
+  <p class="byline">by powertiesbiz</p>
+  <p class="lede">Five plain questions. No email address, no score to share, and nothing is stored or sent. The result points to the earliest missing piece — fix that before polishing anything later in the path.</p>
+</header>
+
+<main>
+  <form id="stuck-quiz" class="quiz-form">
+    <fieldset class="page-card quiz-question">
+      <legend>1. Do you have a website?</legend>
+      <p>A real home base you control — not only a social profile.</p>
+      <label><input type="radio" name="website" value="yes" required> Yes</label>
+      <label><input type="radio" name="website" value="no"> No</label>
+    </fieldset>
+
+    <fieldset class="page-card quiz-question">
+      <legend>2. Are you on Google Business Profile and Search Console?</legend>
+      <p>Your business is listed, your site is verified, and Google knows your pages exist.</p>
+      <label><input type="radio" name="google" value="yes" required> Yes</label>
+      <label><input type="radio" name="google" value="no"> No</label>
+    </fieldset>
+
+    <fieldset class="page-card quiz-question">
+      <legend>3. Do you publish content weekly?</legend>
+      <p>Useful content on a rhythm you actually sustain — not a burst once a quarter.</p>
+      <label><input type="radio" name="content" value="yes" required> Yes</label>
+      <label><input type="radio" name="content" value="no"> No</label>
+    </fieldset>
+
+    <fieldset class="page-card quiz-question">
+      <legend>4. Do you have a lead magnet or quiz?</legend>
+      <p>A free, useful first step that helps a stranger raise their hand.</p>
+      <label><input type="radio" name="leadMagnet" value="yes" required> Yes</label>
+      <label><input type="radio" name="leadMagnet" value="no"> No</label>
+    </fieldset>
+
+    <fieldset class="page-card quiz-question">
+      <legend>5. Do you track and follow up leads in a CRM?</legend>
+      <p>Every lead lands in one place, and follow-up does not depend on remembering an inbox thread.</p>
+      <label><input type="radio" name="crm" value="yes" required> Yes</label>
+      <label><input type="radio" name="crm" value="no"> No</label>
+    </fieldset>
+
+    <p id="quiz-error" class="quiz-error" role="alert" hidden>Please answer all five questions.</p>
+    <button class="cta-btn quiz-submit" type="submit">Find my step</button>
+  </form>
+
+  <section id="quiz-result" class="page-card quiz-result" aria-live="polite" hidden>
+    <p class="step-num" id="result-kicker">Start here</p>
+    <h2 id="result-title"></h2>
+    <p id="result-why"></p>
+    <p><a id="result-link" class="cta-btn" href="index.html">Go to this step on the path</a></p>
+    <p id="result-note"></p>
+  </section>
+
+  <section class="page-card">
+    <h2>Want the deeper diagnostic?</h2>
+    <p>This five-question routing quiz only finds the missing marketing step. <strong>MLOT is free</strong> and goes deeper: it looks for where time and money are leaking inside the business itself.</p>
+    <p><a class="cta-btn" href="mlot.html">Explore the free MLOT diagnostic</a></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <p>Your answers stay in this page. The quiz uses no localStorage, sends nothing, and collects nothing.</p>
+  <p>Built by <a href="https://github.com/powertiesbiz-ai">powertiesbiz</a> · MIT licensed · Found a better free tool or a step that's out of date? Open an issue on GitHub — field reports from real owners are the best contributions this project gets.</p>
+</footer>
+
+<script src="quiz.js"></script>
+</body>
+</html>
