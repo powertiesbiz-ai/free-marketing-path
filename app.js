@@ -192,6 +192,27 @@ const STEPS = [
     ],
     "powerties": "Our outreach engine runs exactly this loop: roughly 10 verified emails a day, a fit-scoring model, a Sunday grading report, and a hard 30-day checkpoint. Early lesson, learned the expensive way: guessed email addresses were our biggest source of bounces. Removing guessing was the single biggest deliverability fix we ever made.",
     "n": 11
+  },
+  {
+    "title": "Find your niche and research the solution",
+    "goal": "Aim the whole system at one niche and get smart about its problems — research the solution space for a specific audience using three sources: open resources and repos (this one included), AI (deep research, summarizing, pattern-spotting across many conversations), and the public forums where the niche talks — then participate in those forums, not just read them.",
+    "why": "Steps 1–11 build the machine; this step aims it. You learn a niche's real pains — in their own words — by listening where they complain, ask, and compare notes. Participation converts research into relationships, and loops back to Step 9 (Community) and Step 10 (Partnerships & barter).",
+    "tools": "This repo and open resources like it; AI chat and deep-research tools; Reddit subs, Discord servers, Facebook groups, and industry forums; F5Bot keyword alerts (the Step 9 listening setup); a simple pains log — a doc or spreadsheet.",
+    "cost": "$0 — time only.",
+    "time": "Two weeks of listening to start; then a standing habit.",
+    "checklist": [
+      "Pick one niche candidate: a specific who with a specific, expensive problem",
+      "Spend two weeks listening in 3–5 forums where they talk before posting anything",
+      "Keep a pains log — their exact words for their problems, not your paraphrase",
+      "Use AI to cluster the pains and draft the solution angle they point to",
+      "Participate genuinely — answer, share your process — and note what resonates",
+      "Test ONE niche-specific lead magnet or offer, and feed the results back into Step 4 (content) and Step 11 (outreach)"
+    ],
+    "notes": [
+      "Some say pick the niche first. In the PowerTies sequence the system came first and the niche sharpened through doing — research lands better when you already have something real to offer."
+    ],
+    "powerties": "PowerTies' niche sharpened through the Guild of Honour and the veteran-trades work — found by participating in those communities, not by desk research alone. The forum listening (Step 9, plus keyword alerts that flag the conversations worth joining) is what surfaces the pains.",
+    "n": 12
   }
 ];
 
