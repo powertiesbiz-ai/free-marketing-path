@@ -6,7 +6,7 @@ This repo is not just a how-to. It is a working test of a claim, run in public, 
 
 **A complete marketing system for a small business no longer requires meaningful money or technical skill.**
 
-The functions that used to be agency-priced — website, search presence, content, CRM, automation, outreach, measurement — now exist at $0–36/month in free and near-free tools. Anyone who tells you the tools are the hard part is selling tools.
+The functions that used to be agency-priced — website, search presence, content, CRM, automation, outreach, measurement — now exist at $0 in free and near-free tools — $0–≈$36/month if you add the paid conveniences PowerTies uses (its all-in spend, ring leader included, is ≈$56/month; see the proof log). Anyone who tells you the tools are the hard part is selling tools.
 
 The real constraint was never cash. It is the **operator**: someone to sequence the work, execute it, verify it, and keep the loops running week after week. Most owners don't fail at marketing because they picked the wrong app. They fail because nobody is running the system on a Tuesday.
 
@@ -14,7 +14,7 @@ That operator — we call the role the **ring leader** — can now be filled by 
 
 Four sub-claims sit under the thesis:
 
-- **(a) The cost collapse is real.** Every function in the path has a free or near-free version that is genuinely good enough — not a crippled trial. PowerTies' whole stack runs at about $36/month by choice, and $0 is honestly possible.
+- **(a) The cost collapse is real.** Every function in the path has a free or near-free version that is genuinely good enough — not a crippled trial. PowerTies' path tools run at about $36/month in paid conveniences by choice (about $56/month all-in once the ring leader's platform is counted — the full ledger is in the proof log), and $0 is honestly possible.
 - **(b) System first, niche second.** Standard advice says niche down before you build anything. PowerTies built the system first, and the niche sharpened afterward — through participation in the communities where the niche talks. We claim that's the more reliable order: a working system aimed roughly beats a perfect niche with no machine behind it.
 - **(c) Published honesty outperforms polished claims.** Real numbers — including zeros, bounces, and failures — build more trust and more distribution than success screenshots. The proof log is the test of this, not just a virtue signal.
 - **(d) A system researched in public improves faster than one researched alone.** Practitioners reporting what actually worked in their trade and town is better data than expert theory — including ours.
