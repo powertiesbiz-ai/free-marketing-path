@@ -82,7 +82,7 @@ const STEPS = [
       "Route every completion into your CRM as a lead",
       "Link the quiz from your homepage, your posts, and your profiles"
     ],
-    "powerties": "MLOT (Money Left on the Table) is our free diagnostic; two quizzes — AI-readiness and a mini-MLOT — feed it. The quizzes prescribe the $99 AI working session. The offer lands because the visitor just saw their own gaps, in their own numbers.",
+    "powerties": "MLOT (Money Left on the Table) is our free diagnostic; two quizzes — AI-readiness and a mini-MLOT — feed it. The quizzes prescribe the $99 AI working session. The offer lands because the visitor just saw their own gaps, in their own numbers. See the live example on this very site: the MLOT page (mlot.html, in the menu above) is our real funnel, not a mockup — free diagnostic first, $99 session second.",
     "n": 5
   },
   {
@@ -343,3 +343,4 @@ document.getElementById("reset-progress").addEventListener("click", () => {
 });
 
 render();
+
