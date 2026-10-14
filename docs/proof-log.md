@@ -6,6 +6,8 @@ PowerTies is using the system in this repo to market a real one-person business.
 
 Copy the format. Publish your own. Compare the system against reality, not against a screenshot in an advertisement.
 
+This log is the lab notebook for a stated claim. What it's testing — and the research questions other owners are helping answer — lives in **[docs/thesis-and-research.md](thesis-and-research.md)**. If you've walked a step of the path yourself, the way to contribute your data is a **[field report](../templates/field-report.md)**: one real attempt, cash and hours counted, consent chosen by you.
+
 ## Monthly entry template
 
 Copy everything below for a new monthly entry.
