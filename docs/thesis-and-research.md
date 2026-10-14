@@ -29,6 +29,16 @@ The stronger test is **replication**: other owners importing the workflows in th
 
 **Refutation is real, and it's part of the deal.** If verified execution produces no movement by the checkpoints, a claim has failed. If replications consistently stall at the same step, that step — or the transfer claim behind it — has failed. When that happens, the log says so, in the same place and the same type size as the wins. If we ever quietly stop publishing, you have your answer about which outcome we got.
 
+## What success means (the owner's definition, stated October 13, 2026)
+
+Success for this project is not raw traffic, not follower counts, and not even reply counts. The owner defined it on October 13, 2026, and it has three parts:
+
+- **(a) Cost held as low as possible.** The stack is a work in progress whose direction is always toward $0. Paid lines exist only where they buy speed, and each one is expected to justify itself or be cut.
+- **(b) Real leads producing good conversations.** A good conversation is a genuine two-way exchange with an owner who fits the ICP — a small US business with a named founder or decision-maker, roughly $500K+ in revenue preferred, and a real willingness to invest in help. A polite brush-off, an out-of-office, or a reply from someone who was never a fit does not count. Noise is not signal, and we don't grade it as signal.
+- **(c) The owner closes personally.** The system's job ends at the conversation. Keith has those conversations and closes them himself — no automated pitching past the point of genuine interest. The target rate is **1–2 real conversations per week**.
+
+One timing note, because it matters: this definition was recorded on **October 13, 2026 — before the October 31, 2026 checkpoint reads its first verdict**. A standard written down before the results arrive is a standard. The same words written afterward would be a rationalization.
+
 ## The research questions
 
 These are the five things we genuinely don't know and are asking the field — owners actually doing this — to help answer:
