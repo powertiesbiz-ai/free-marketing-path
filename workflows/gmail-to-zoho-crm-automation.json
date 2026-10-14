@@ -1,0 +1,311 @@
+{
+  "name": "Gmail to Zoho CRM Automation",
+  "nodes": [
+    {
+      "id": "438bea56-7b27-49d4-bf42-dd76095b3af3",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -240,
+        -32
+      ],
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "f2e729ef-9588-4f36-9523-c71b5461851e",
+      "name": "Create a contact",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        624,
+        -48
+      ],
+      "parameters": {
+        "resource": "contact",
+        "lastName": "={{$('AI Agent').item.json.output.split('LASTNAME: ')[1].split('\\n')[0].trim()}}",
+        "additionalFields": {
+          "Email": "={{$('AI Agent').item.json.output.split('EMAIL: ')[1].split('\\n')[0].trim()}}",
+          "First_Name": "={{$('AI Agent').item.json.output.split('FIRSTNAME: ')[1].split('\\n')[0].trim()}}",
+          "Mobile": "={{$('AI Agent').item.json.output.split('PHONE: ')[1].split('\\n')[0].trim()}}"
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "f313a74d-dd18-4e68-aaee-65014baf1369",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "position": [
+        -48,
+        -32
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a helpful business assistant for Your Business Consulting Group. \nRead this email and extract contact information, then classify it.\n\nEmail From: {{$('Gmail Trigger').item.json.From}}\nEmail Subject: {{$('Gmail Trigger').item.json.Subject}}\nEmail Content: {{$('Gmail Trigger').item.json.snippet}}\n\nRespond ONLY with this exact format, no other text:\nFIRSTNAME: [first name or Unknown]\nLASTNAME: [last name or Unknown]\nEMAIL: [email address]\nPHONE: [phone number or Unknown]\nCOMPANY: [company name or Unknown]\nISLEAD: [YES or NO]\nADDTOCRM: [YES or NO]\nLEADREASON: [one sentence explaining why this is or isn't a lead]\n\nRules:\n- If the email address contains \"noreply\", \"no-reply\", \"donotreply\", or \"mailer\" set ADDTOCRM: NO and ISLEAD: NO\n- If the email is automated, a newsletter, spam, or someone trying to sell you something set ADDTOCRM: NO and ISLEAD: NO\n- A LEAD is a real person who has a direct question, wants advice, or is a potential client or referral — set ISLEAD: YES and ADDTOCRM: YES\n- All other real people — routine correspondence, replies, CCs, forwards, introductions with no question or ask — set ADDTOCRM: NO and ISLEAD: NO. Only someone with a direct question, asking for advice or help, or showing buying/referral intent becomes a lead\n- If you cannot determine the sender's real first AND last name (both would be Unknown), set ADDTOCRM: NO and ISLEAD: NO — never create a CRM record for an unnamed sender. Use the From display name when the email body doesn't include one.\n\n- If you cannot determine a valid EMAIL address for the sender, set ADDTOCRM: NO and ISLEAD: NO — never create a CRM record without an email address. Records without emails cannot be deduped and create duplicates.\n- If the email is a newsletter, bulk/marketing broadcast, digest, roundup, or automated list email — signals include 'unsubscribe' text, 'view in browser', or a public figure/company broadcasting to subscribers — set ADDTOCRM: NO and ISLEAD: NO, even if the sender is a real, well-known person.\n- If the sender is the owner himself (Your Name, or any Your Business.us / Your Business address), set ADDTOCRM: NO and ISLEAD: NO.\n",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "ab85c429-75eb-4762-8244-3bc7fce78570",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        224,
+        -32
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "588ef408-6c39-468e-9bf5-96f714be26e7",
+              "leftValue": "={{$json.output.split('ADDTOCRM: ')[1].split('\\n')[0].trim()}}",
+              "rightValue": "YES",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "b8f65933-9a9b-49df-a35c-cdacae51a14f",
+              "leftValue": "={{$json.output.split('ISLEAD: ')[1].split('\\n')[0].trim()}}",
+              "rightValue": "YES",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "65f2a63c-3876-4880-b2e0-223f18cfd08e",
+      "name": "Send a text message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        -48
+      ],
+      "parameters": {
+        "chatId": "__replace__",
+        "text": "=🔔 New Lead Alert!  Name: {{$('AI Agent').item.json.output.split('FIRSTNAME: ')[1].split('\\n')[0].trim()}} {{$('AI Agent').item.json.output.split('LASTNAME: ')[1].split('\\n')[0].trim()}}  Email: {{$('AI Agent').item.json.output.split('EMAIL: ')[1].split('\\n')[0].trim()}}  Phone: {{$('AI Agent').item.json.output.split('PHONE: ')[1].split('\\n')[0].trim()}}  Company: {{$('AI Agent').item.json.output.split('COMPANY: ')[1].split('\\n')[0].trim()}}  Reason: {{$('AI Agent').item.json.output.split('LEADREASON: ')[1].split('\\n')[0].trim()}}  📧 Subject: {{$('Gmail Trigger').item.json.Subject}}",
+        "additionalFields": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "b7d99835-35b4-4adf-a713-01c7c3db8431",
+      "name": "Groq Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        128
+      ],
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "e06dde55-70f4-45ed-bbde-a8541ab71fee",
+      "name": "Create or update a lead",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        832,
+        -48
+      ],
+      "parameters": {
+        "resource": "lead",
+        "operation": "upsert",
+        "Company": "={{$('AI Agent').item.json.output.split('COMPANY: ')[1].split('\\n')[0].trim()}}",
+        "lastName": "={{$('AI Agent').item.json.output.split('LASTNAME: ')[1].split('\\n')[0].trim()}}",
+        "additionalFields": {
+          "First_Name": "={{$('AI Agent').item.json.output.split('FIRSTNAME: ')[1].split('\\n')[0].trim()}}",
+          "Lead_Source": "email",
+          "Mobile": "={{$('AI Agent').item.json.output.split('PHONE: ')[1].split('\\n')[0].trim()}}"
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "412a0e31-4ef0-4419-b793-813e0a93d03b",
+      "name": "Skip self-sent emails",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -20,
+        -32
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "b4e6f036-ec0e-4c9b-8080-946a5582f49c",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "you@example.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            },
+            {
+              "id": "06fd6503-b288-417e-a82a-bddb52604668",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "you@example.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            },
+            {
+              "id": "6794d851-6748-4417-93ae-5f8d757c95cd",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "Your Name",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            },
+            {
+              "id": "81b8d03b-5643-4cab-be8d-0526fff8db96",
+              "leftValue": "={{ $json.From }}",
+              "rightValue": "@app.basecamp.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains",
+                "name": "filter.operator.contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "credentials": {}
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Skip self-sent emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a contact": {
+      "main": [
+        [
+          {
+            "node": "Create or update a lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        [
+          {
+            "node": "Create a contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skip self-sent emails": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
