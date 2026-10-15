@@ -250,22 +250,23 @@ You can also staff the ring leader for $0 with an open-source agent framework �
 
 **Why it matters:** Most outreach fails quietly because nobody measures it. A scored list, verified emails, small daily batches, and a weekly grading loop turn guessing into a system you can actually improve.
 
-**Tools — the actual PowerTies setup:** Claude (paid plan) is the lead-research leg: it finds company names, their location/context, and why each company fits. Apollo.io's free tier is an optional lead-data accelerator — PowerTies' Apollo leg is currently paused until its October 24, 2026 credit refresh. Tank coordinates this pooled model, verifies every address, and sends. Zoho CRM holds the records, and a spreadsheet or grading-sheet template is enough for the weekly grade. The generic route still works: do the research yourself with search, directories, and community listening from Step 9 — and never send to an address you have not verified.
+**Tools — the actual PowerTies setup:** Lead Engine v2, pooled. The discovery legs are: Gemini web extraction (published lists, directories, and company About/Team pages), the Google Maps scraper (gosom/google-maps-scraper) with Crawl4AI enrichment of the businesses it finds, Instagram, Claude research batches (company names, location/context, and why each company fits), and the Lead Finder app. Territory comes first: we pick where to hunt using Census data — business counts and demographics by area — instead of scraping wherever happens to be easy. Tank coordinates this pooled model, verifies every address, and sends. Apollo.io's free tier is an optional lead-data accelerator — PowerTies' Apollo leg is currently paused until its October 24, 2026 credit refresh. Zoho CRM holds the records, and a spreadsheet or grading-sheet template is enough for the weekly grade. The generic route still works: do the research yourself with search, directories, and community listening from Step 9 — and never send to an address you have not verified.
 
-**Estimated cost:** $0 to near-$0 for the generic route. PowerTies chooses Claude at ≈$21/mo for research speed (optional, and under review in October 2026 — the ring leader can absorb the research leg); Apollo is optional on its free tier. Verifiers have free tiers; the discipline is free.
+**Estimated cost:** $0 to near-$0 for the generic route. PowerTies chooses Claude at ≈$21/mo for research speed (optional, and under review in October 2026 — the ring leader can absorb the research leg); the Maps scraper and Crawl4AI are open-source and cost $0; Apollo is optional on its free tier. Verifiers have free tiers; the discipline is free.
 
 **Estimated time:** About 30 minutes a day for sends; an hour a week to grade.
 
 **Checklist:**
 
-- [ ] Build a lead list of named decision-makers at businesses that fit — and score each lead's fit before anyone gets emailed
-- [ ] Verify every email address before sending. Never guess an address pattern: guessed addresses bounce, and bounces destroy your deliverability
+- [ ] Pick your territory from Census data first, then build a lead list of named decision-makers at businesses that fit — and score each lead's fit before anyone gets emailed
+- [ ] Pool every discovery leg into one queue contract: the same columns from every leg, so a Maps row (source prefix `maps:`, with its `rating` and `review_count`) and a web, Instagram, Claude, or Lead Finder row all sit in the same file, scored the same way
+- [ ] Verify every email address before sending, and only send to published addresses. Never guess an address pattern: guessed addresses bounce, and bounces destroy your deliverability. Anything the verifier drops goes in a dropped-address ledger — kept, counted, and never quietly recycled back into the queue
 - [ ] Send small daily batches (we do about 10 a day, weekdays only) and log every send
 - [ ] Track the funnel honestly: sent → delivered → replied → paid → revenue
-- [ ] Grade weekly: which score bands and sources produced replies? Refine your criteria from the evidence, not from vibes
+- [ ] Grade weekly, on Sundays, per source: which legs, score bands, and sources produced replies — and which produced bounces? Refine your criteria from the evidence, not from vibes
 - [ ] Set a 30-day checkpoint in advance: if replies are still zero, diagnose the real cause — deliverability, message, targeting, offer, channel — instead of just sending more
 
-**How PowerTies does it:** Our outreach engine is pooled: Claude finds companies and makes the fit case, Tank verifies the published addresses and sends roughly 10 a day, and the results run through a fit-scoring model, a Sunday grading report, and a hard 30-day checkpoint. Early lesson, learned the expensive way: guessed email addresses were our biggest source of bounces. Removing guessing was the single biggest deliverability fix we ever made.
+**How PowerTies does it:** Our outreach engine is the combined one described above: territory picked from Census data, the discovery legs pooled into one queue contract, a fit-scoring model, a verifier gate that keeps a dropped-address ledger, Tank sending roughly 10 a day from the published addresses that pass, Sunday per-source grading, and a hard 30-day checkpoint. Early lesson, learned the expensive way: guessed email addresses were our biggest source of bounces. Removing guessing was the single biggest deliverability fix we ever made.
 
 ## Step 12: Find your niche and research the solution
 
