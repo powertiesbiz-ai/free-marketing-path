@@ -134,3 +134,36 @@ this file is the build diary behind them.
   paid plan ends Oct 22) — it remains a research leg at $0. The path's
   all-in stack drops to ~$35/mo (Tank $20 + n8n ~$15); everything else
   on the path was already $0.
+
+## Oct 15, 2026 — Plan B1: nurture engine LIVE; one UI step left on the branch
+
+- The Oct 14 blocker fell: the owner re-selected the Kit "Header Auth
+  account" credential inside the Nurture Engine's Kit node in the n8n UI
+  and saved. That proved to be the fix — on this n8n instance, generic
+  credentials only take effect when the node is saved from the UI, not
+  when attached through the API.
+- Both held tests passed the same afternoon, against a designated test
+  subscriber only:
+  - A real Day-1 nurture email sent through the engine and was verified
+    in the inbox, word-for-word against the approved copy, signature
+    included.
+  - Booked-99 suppression: with the test subscriber tagged, a due
+    Day-7 send was skipped, the record closed as booked-99, and no
+    email arrived. One caveat found: Kit's tag membership can take
+    ~15 minutes to show up in the tag's subscriber list (an early
+    attempt ran before it propagated) — acceptable on a daily send
+    cadence.
+- The live swap was performed: the four-node Kit branch now sits in the
+  live Quiz Lead Capture workflow alongside the original nine nodes,
+  verified unchanged, and a controlled end-to-end run through the live
+  quiz webhook passed the main chain — Zoho lead created (marked as a
+  test lead for deletion), Day-0 follow-up sent, alert sent, nurture
+  obligations recorded.
+- What is NOT done, stated plainly: the branch's two Kit write nodes
+  (add subscriber, apply tag) still return 401, because their
+  credential was attached through the API — the same defect the UI
+  re-select fixed on the engine node. Until the owner re-selects the
+  credential on those two nodes (and on Square's booked-99 tag node,
+  attached the same way), new quiz leads are not added to Kit or
+  tagged. The nurture emails themselves — Days 1/3/7/12 with booked-99
+  suppression — are live and proven.
