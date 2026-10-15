@@ -167,3 +167,26 @@ this file is the build diary behind them.
   attached the same way), new quiz leads are not added to Kit or
   tagged. The nurture emails themselves — Days 1/3/7/12 with booked-99
   suppression — are live and proven.
+
+## Oct 15, 2026 — Plan B1: FULLY LIVE (branch retest passed)
+
+- The owner completed the last UI step: re-selected the Kit credential
+  on the branch's two write nodes in the live Quiz Lead Capture
+  workflow, and on Square's booked-99 tag node.
+- Closing retest through the live quiz webhook (test identity,
+  AI-readiness quiz): add-subscriber returned the subscriber record
+  with no 401 (previously every API-attached call failed); apply-tag
+  stamped the quiz-ai-readiness tag, confirmed by a direct Kit
+  read-back carrying the run's own timestamp; nurture obligations
+  recorded in the engine; the main chain stayed intact — Zoho test
+  lead created (marked for deletion), Day-0 follow-up and alert sent.
+  The engine's test record was emptied afterwards.
+- Plan B1 is fully live: quiz leads land in Kit, get tagged by quiz,
+  and receive the Day 1/3/7/12 nurture emails from n8n with booked-99
+  suppression.
+- One honest footnote: Square's workflow shows no save on the day of
+  the re-select, although its tag node references the same working
+  credential as the proven nodes. Whether that single node carries
+  the UI-saved state is inferred, not proven — its first live fire
+  (a real $99 payment) settles it, and its continue-on-fail setting
+  confines any failure to the suppression tag alone.
