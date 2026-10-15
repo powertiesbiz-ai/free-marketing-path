@@ -91,3 +91,46 @@ this file is the build diary behind them.
   four Kit nodes, running the two held tests (a real Day-1 send; proof
   that a booked subscriber is suppressed), then swapping the branch into
   the live Quiz Lead Capture workflow. Not live yet.
+
+## Oct 15, 2026 — Lead Engine v2: combined discovery, built and piloted
+
+- Keith's decision today: combine four free open-source tools with the
+  existing outreach pipeline instead of relying on any single discovery
+  leg. Full design (vision-doc standard: walkthrough, legal review per
+  step, costs, assumptions challenged, measurement):
+  [docs/lead-engine-design.md](lead-engine-design.md); also filed in
+  Drive > Tank as "Lead Engine v2 — Combined Discovery Design (Oct 2026)".
+- The four legs, all running at $0 on the existing stack:
+  (1) Territory — Census County Business Patterns 2023 + ACS 2023 rank
+  metros per trade (the Census API now requires a key, so the module
+  uses the Bureau's official downloadable datasets and says so).
+  (2) Discovery — gosom/google-maps-scraper (MIT) pulls real Google Maps
+  business data: rating and review count are two new queue columns.
+  Docker cannot run on the Tank VM (kernel restrictions), so the leg
+  runs the project's standalone binary — same tool, different wrapper.
+  (3) Enrichment — a Crawl4AI-based reader (with a plain urllib fallback
+  that outperformed it in the pilot) FINDS the owner and the published
+  email on each company's own site. Derivation stays banned.
+  (4) Dossiers — theHarvester builds on-demand public-footprint briefs
+  for call prep; it is a research tool, never a queue leg.
+- One contract, unchanged: every leg feeds the same queue CSV →
+  Stage 1 scoring → verifier gate (with the permanent dropped-address
+  ledger) → sends. Old legs (Gemini web, Instagram, Claude batches,
+  Lead Finder app) stay live and switchable. grade_week.py now grades
+  BY SOURCE as well as by score band, so each Sunday the legs compete
+  on sent/bounced/delivered evidence.
+- Pilot (roofing, Dallas–Fort Worth — the Census rank #1 metro for
+  NAICS 238160; NO sends, stopped at a verified queue): 21 businesses
+  scraped → 20 with websites → 11 with a published email found →
+  4 with an owner name found → 3 queue-ready → 3 scored sendable
+  (87/77/77) → 1 passed the verifier. Read: email discovery is not the
+  bottleneck (52%); owner-name extraction is (19%). One extracted
+  "owner" was a false positive (a university name), and it belonged to
+  the single verifier-passing row — the gates all passed a bad name.
+  Standing rule from the pilot: owner names from enrichment are
+  candidate signals and get a human sanity check before any
+  maps-sourced row is sent.
+- Cost amendment: Claude moved to the FREE tier on Oct 15, 2026 (the
+  paid plan ends Oct 22) — it remains a research leg at $0. The path's
+  all-in stack drops to ~$35/mo (Tank $20 + n8n ~$15); everything else
+  on the path was already $0.
